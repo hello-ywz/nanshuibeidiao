@@ -18,12 +18,9 @@
     <button id="panel-close" title="关闭面板">&times;</button>
     <h2>南水北调工程</h2>
     <p class="subtitle">动态流动线路图</p>
+    <!-- info-box 已移除 -->
 
-    <div id="info-box">
-      <h3 id="route-name">东线工程</h3>
-      <p id="route-desc"></p>
-      <div id="route-details"></div>
-    </div>
+    <button id="btn-toggle-labels" title="显示/隐藏天地图标注">🗺 天地图标注：开</button>
 
     <div class="param-section">
       <h4>🎨 线条参数</h4>
@@ -66,6 +63,9 @@
   </div>
 
   <!-- 底部信息条已移除 -->
+
+  <!-- 实时坐标显示 -->
+  <div id="coord-bar">经度 -- | 纬度 --</div>
 
 
   <!-- 加载自定义线路数据（无需服务器） -->

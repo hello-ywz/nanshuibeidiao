@@ -312,6 +312,55 @@ body {
   display: none;
 }
 
+/* 天地图标注切换按钮 */
+#btn-toggle-labels {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(24, 144, 255, 0.15);
+  color: #4facfe;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+#btn-toggle-labels:hover {
+  background: rgba(24, 144, 255, 0.25);
+  border-color: rgba(24, 144, 255, 0.4);
+}
+
+#btn-toggle-labels.off {
+  background: rgba(255, 255, 255, 0.06);
+  color: #8899aa;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 实时坐标条 */
+#coord-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+  padding: 6px 14px;
+  background: rgba(10, 22, 40, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  font-size: 12px;
+  color: #8899aa;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+#coord-bar span {
+  color: #4facfe;
+  font-weight: 600;
+}
+
 /* 全屏按钮 */
 #btn-fullscreen {
   position: absolute;
