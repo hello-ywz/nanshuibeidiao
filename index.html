@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>南水北调工程 - 动态流动线路图</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@10.2.1/ol.css">
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- 全屏按钮 -->
+  <button id="btn-fullscreen" title="全屏">⛶</button>
+
+  <!-- 图层面板 -->
+  <div id="panel">
+    <button id="panel-close" title="关闭面板">&times;</button>
+    <h2>南水北调工程</h2>
+    <p class="subtitle">动态流动线路图</p>
+
+    <div id="info-box">
+      <h3 id="route-name">东线工程</h3>
+      <p id="route-desc"></p>
+      <div id="route-details"></div>
+    </div>
+
+    <div class="param-section">
+      <h4>🎨 线条参数</h4>
+      <div class="param-row">
+        <label>颜色</label>
+        <input type="color" id="color-picker" value="#1890ff">
+        <span id="color-hex">#1890ff</span>
+      </div>
+      <div class="param-row">
+        <label>线宽</label>
+        <input type="range" id="linewidth-slider" min="1" max="10" step="0.5" value="4">
+        <span id="linewidth-value">4</span>
+      </div>
+      <div class="param-row">
+        <label>流速</label>
+        <input type="range" id="speed-slider" min="0.5" max="5" step="0.5" value="2">
+        <span id="speed-value">2x</span>
+      </div>
+      <div class="param-row">
+        <label>波长</label>
+        <input type="range" id="wavelength-slider" min="20" max="200" step="10" value="80">
+        <span id="wavelength-value">80</span>
+      </div>
+      <div class="param-row">
+        <label>暗部亮度</label>
+        <input type="range" id="darkalpha-slider" min="0" max="50" step="1" value="8">
+        <span id="darkalpha-value">0.08</span>
+      </div>
+      <div class="param-row">
+        <label>亮部亮度</label>
+        <input type="range" id="brightalpha-slider" min="30" max="100" step="1" value="95">
+        <span id="brightalpha-value">0.95</span>
+      </div>
+      <div class="param-row">
+        <label>高光强度</label>
+        <input type="range" id="highlight-slider" min="0" max="100" step="1" value="70">
+        <span id="highlight-value">0.70</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部信息条已移除 -->
+
+
+  <!-- 加载自定义线路数据（无需服务器） -->
+  <script src="data/dongxian.js"></script>
+  <script src="data/dongpinghu.js"></script>
+  <!-- 如有更多线路，继续添加 -->
+  <!-- <script src="data/zhongxian.js"></script> -->
+  <!-- <script src="data/xixian.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/ol@10.2.1/dist/ol.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
