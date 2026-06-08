@@ -88,7 +88,7 @@ function getDemoRoutes() {
       ],
       coords: [],
       startName: '台儿庄泵站',
-      endName: '睦里庄闸',
+      endName: '睦里闸',
       desc: '从扬州江都水利枢纽引水，利用京杭大运河及平行河道至天津，途经山东穿黄',
       length: '约1150公里',
       annual: '148亿立方米'
